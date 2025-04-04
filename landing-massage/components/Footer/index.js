@@ -1,53 +1,59 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#EDE0D4] text-[#5C4033] py-10 w-full flex justify-center">
-      <div className="w-full max-w-5xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-start text-center md:text-left gap-8">
-        {/* Kolom 1 - About Us */}
-        <div className="w-auto flex flex-col items-center md:items-start max-w-xs">
-          <h1 className="text-lg font-bold mb-3">About Us</h1>
-          <p className="text-sm">
-            Kami menyediakan layanan terbaik dengan harga terjangkau. Hubungi
-            kami untuk informasi lebih lanjut.
+    <footer className="bg-gradient-to-br from-[#F8F6F1] to-[#EDEAE0] text-[#444] py-12 w-full">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        {/* Kolom 1 - Tentang Kami */}
+        <div>
+          <h2 className="text-xl font-bold uppercase mb-4 tracking-wide text-[#626F44]">Tentang Kami</h2>
+          <p className="text-sm leading-relaxed opacity-90">
+            Kami memberikan layanan terbaik dengan harga terjangkau. Hubungi kami untuk informasi lebih lanjut.
           </p>
           {/* Social Media */}
-          <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:text-gray-300 text-xl">
-              <FaFacebook />
-            </a>
-            <a href="#" className="hover:text-gray-300 text-xl">
-              <FaInstagram />
-            </a>
-            <a href="#" className="hover:text-gray-300 text-xl">
-              <FaTwitter />
-            </a>
-            <a href="#" className="hover:text-gray-300 text-xl">
-              <FaWhatsapp />
-            </a>
+          <div className="flex justify-center md:justify-start gap-3 mt-5">
+            {[FaFacebook, FaInstagram, FaTwitter, FaWhatsapp].map((Icon, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="w-9 h-9 rounded-full bg-[#A4B465]/10 text-[#626F44] flex items-center justify-center hover:bg-[#A4B465]/20 transition-all duration-300"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
           </div>
         </div>
 
         {/* Kolom 2 - Jam Operasional */}
-        <div className="w-auto flex flex-col items-center md:items-start max-w-xs">
-          <h1 className="text-lg font-bold mb-3">Jam Operasional</h1>
-          <ul className="text-sm space-y-1">
+        <div>
+          <h2 className="text-xl font-bold uppercase mb-4 tracking-wide text-[#626F44]">Jam Operasional</h2>
+          <ul className="text-sm space-y-1 opacity-90">
             <li>Senin - Jumat: 08:00 - 20:00</li>
             <li>Sabtu: 09:00 - 18:00</li>
-            <li>Minggu: Tutup</li>
+            <li className="opacity-70">Minggu: Tutup</li>
           </ul>
         </div>
 
         {/* Kolom 3 - Kontak */}
-        <div className="w-auto flex flex-col items-center md:items-start max-w-xs">
-          <h1 className="text-lg font-bold mb-3">Hubungi Kami</h1>
-          <ul className="text-sm space-y-1">
+        <div>
+          <h2 className="text-xl font-bold uppercase mb-4 tracking-wide text-[#626F44]">Hubungi Kami</h2>
+          <ul className="text-sm space-y-2 opacity-90">
             <li>📍 Jalan Contoh No. 123, Kota ABC</li>
             <li>✉️ email@contoh.com</li>
             <li>📞 0812-3456-7890</li>
           </ul>
         </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="mt-12 border-t border-[#ccc]/40 pt-6 text-center text-sm text-[#888]">
+        &copy; {new Date().getFullYear()} TaraProject. All rights reserved. 
       </div>
     </footer>
   );
