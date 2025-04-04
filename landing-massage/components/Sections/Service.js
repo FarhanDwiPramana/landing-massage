@@ -36,7 +36,7 @@ export default function Service() {
       icon: "/icons/service",
       title: "Pijat Refleksi",
       description:
-        "Nunc Manfaat dari Pijat Refleksi atau sering juga di sebut Reflexology ini memberikan jutaan manfaat untuk mecegah dan memperbaiki organ bagian dalam.",
+        "Nunc Manfaat dari Pijat Refleksi atau sering juga di sebut Reflexology ini memberikan jutaan manfaat untuk mencegah dan memperbaiki organ bagian dalam.",
     },
     {
       icon: "/icons/service",
@@ -48,7 +48,7 @@ export default function Service() {
       icon: "/icons/service",
       title: "Pijat Tradisional",
       description:
-        "Untuk manfaat Pijat Tradisional hampir sama dengan menu layanan Body Massage karena metode pemijatanya memang sama persis.",
+        "Untuk manfaat Pijat Tradisional hampir sama dengan menu layanan Body Massage karena metode pemijatannya memang sama persis.",
     },
     {
       icon: "/icons/service",
@@ -60,12 +60,13 @@ export default function Service() {
       icon: "/icons/service",
       title: "Scrub & Lulur",
       description:
-        "Banyak sekali manfaat Scrub dan Lulur ini untuk mengangkat sel sel kulit mati dan memberikan nutrisi dan vitamin pada kulit agar tetap cerah dan sehat.",
+        "Banyak sekali manfaat Scrub dan Lulur ini untuk mengangkat sel-sel kulit mati dan memberikan nutrisi dan vitamin pada kulit agar tetap cerah dan sehat.",
     },
   ];
 
   return (
     <div className="relative w-full min-h-screen bg-white">
+      {/* Background Wave */}
       <div className="relative -mt-1">
         <svg
           className="w-full"
@@ -80,6 +81,7 @@ export default function Service() {
         </svg>
       </div>
 
+      {/* Features Section */}
       <div className="py-12 px-6 -mt-90 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-white">
           {features.map((feature, index) => (
@@ -102,33 +104,36 @@ export default function Service() {
         </div>
       </div>
 
-      <div className=" py-24">
-        <h1 className="text-4xl text-center font-bold text-black">
-          Layanan Kami
-        </h1>
-        <h2 className="text-xl text-center mt-6 ">
-          Silakan pilih menu di bawah ini sesuai dengan kebutuhan Anda
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-4">
-          {service.map((item, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-gray-700"
-            >
-              <div className="flex justify-center mb-4">
-                <Image
-                  src={`${item.icon}.png`}
-                  alt={item.title}
-                  width={50}
-                  height={50}
-                />
+      {/* Services Section */}
+      <div className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <h1 className="text-4xl text-center font-bold text-black">
+            Layanan Kami
+          </h1>
+          <h2 className="text-xl text-center mt-6">
+            Silakan pilih menu di bawah ini sesuai dengan kebutuhan Anda
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-4">
+            {service.map((item, index) => (
+              <div
+                key={index}
+                className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-gray-700"
+              >
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src={`${item.icon}.png`}
+                    alt={item.title}
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <h3 className="font-semibold text-lg text-gray-800">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </div>
-              <h3 className="font-semibold text-lg text-gray-800">
-                {item.title}
-              </h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
