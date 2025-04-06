@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Header() {
   const data = {
@@ -44,9 +45,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <div className="w-17 h-17 bg-[#F8FFD9] flex items-center justify-center rounded-full shadow-md overflow-hidden">
-          <img
+          <Image
             src="/images/Main/logo.png"
             alt="Logo FRESH"
+            width={200} // Wajib diisi
+            height={100} // Wajib diisi
             className="w-full h-full object-cover"
           />
         </div>
@@ -69,9 +72,14 @@ export default function Header() {
         </nav>
 
         {/* Contact Button */}
-        <button className="hidden md:block px-5 py-2 bg-[#A0C878] text-white text-sm font-bold rounded-full shadow-md hover:bg-green-600 transition">
+        <a
+          href="https://wa.me/6282142784477"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block px-5 py-2 bg-[#A0C878] text-white text-sm font-bold rounded-full shadow-md hover:bg-green-600 transition"
+        >
           Hubungi Kami
-        </button>
+        </a>
 
         {/* Mobile Menu Button */}
         <button

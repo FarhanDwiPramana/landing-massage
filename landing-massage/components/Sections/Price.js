@@ -7,19 +7,19 @@ export default function HargaLayanan() {
   const prices = {
     pagi: {
       label: "Pagi",
-      icon: <Sun size={24} className="text-white" />,
+      icon: <Sun size={24} className="text-black" />,
       time: "08:00 AM",
       price: "Rp 50.000",
     },
     siang: {
       label: "Siang",
-      icon: <SunMedium size={24} className="text-yellow-300" />,
+      icon: <SunMedium size={24} className="text-yellow-400" />,
       time: "12:00 PM",
       price: "Rp 70.000",
     },
     malam: {
       label: "Malam",
-      icon: <Moon size={24} className="text-blue-100" />,
+      icon: <Moon size={24} className="text-blue-300" />,
       time: "07:00 PM",
       price: "Rp 90.000",
     },
@@ -52,8 +52,7 @@ export default function HargaLayanan() {
         >
           {/* Tab Switcher */}
           <div
-            className="flex flex-row md:flex-col bg-white/10 backdrop-blur-lg rounded-3xl p-4 md:p-6 w-full md:w-40 items-center justify-between md:justify-start gap-4 shadow-lg"
-            data-aos="fade-right"
+            className="flex flex-row md:flex-col bg-white/10 backdrop-blur-lg rounded-3xl p-4 md:p-6 w-full md:w-40 items-center justify-between md:justify-start md:gap-22 lg:gap-22 shadow-lg"
             data-aos-duration="800"
             data-aos-delay="200"
             data-aos-once="false"
@@ -86,7 +85,7 @@ export default function HargaLayanan() {
               {prices[selected].icon}
             </div>
 
-            <h3 className="text-xl sm:text-2xl font-bold mt-5">
+            <h3 className="text-xl textsm:text-2xl font-bold mt-5">
               {prices[selected].label}
             </h3>
             <p className="text-gray-500 text-base mt-2">
@@ -97,9 +96,14 @@ export default function HargaLayanan() {
             </p>
 
             {/* Tombol Booking */}
-            <button className="mt-6 bg-[#A4B465] text-white px-6 py-3 rounded-full w-full text-base sm:text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-[#8DA457] hover:shadow-lg">
+            <a
+              href="https://wa.me/6282142784477"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 block bg-[#A4B465] text-white px-6 py-3 rounded-full w-full text-base sm:text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-[#8DA457] hover:shadow-lg text-center"
+            >
               Booking Sekarang
-            </button>
+            </a>
           </div>
         </div>
       </div>

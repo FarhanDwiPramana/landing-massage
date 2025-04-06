@@ -79,16 +79,19 @@ export default function Main() {
         </p>
 
         {/* Tombol WA */}
-        <button
-          className="px-6 py-3 text-base sm:text-lg md:text-xl font-bold uppercase bg-[#4B6025] text-white rounded-lg shadow-lg 
-          transition-all duration-300 ease-in-out flex items-center gap-3 cursor-pointer 
-          hover:bg-[#3A4E1D] hover:-translate-y-1 active:scale-95"
+        <a
+          href="https://wa.me/6282142784477"
+          target="_blank"
+          rel="noopener noreferrer"
           data-aos="zoom-in"
           data-aos-duration="800"
           data-aos-delay="300"
+          className="px-6 py-3 text-base sm:text-lg md:text-xl font-bold uppercase bg-[#4B6025] text-white rounded-lg shadow-lg 
+          transition-all duration-300 ease-in-out flex items-center gap-3 cursor-pointer 
+          hover:bg-[#3A4E1D] hover:-translate-y-1 active:scale-95"
         >
           <FaWhatsapp className="text-xl sm:text-2xl" /> Booking Sekarang
-        </button>
+        </a>
       </div>
     </div>
   );

@@ -5,23 +5,23 @@ import React from "react";
 export default function Service() {
   const features = [
     {
-      icon: "/icons/service1.png",
+      icon: "/images/Icon/icon-layanan-1.png",
       title: "Melayani dengan Tulus",
       description:
         "Profesionalisme & kenyamanan pelanggan adalah prioritas kami.",
     },
     {
-      icon: "/icons/service2.png",
+      icon: "/images/Icon/icon-layanan-2.png",
       title: "Bebas Biaya Transport",
       description: "Layanan pijat langsung ke lokasi tanpa biaya tambahan.",
     },
     {
-      icon: "/icons/service3.png",
+      icon: "/images/Icon/icon-layanan-3.png",
       title: "Buka 24 Jam",
       description: "Siap melayani kapan pun Anda butuhkan.",
     },
     {
-      icon: "/icons/service4.png",
+      icon: "/images/Icon/icon-layanan-4.png",
       title: "Pesan Mudah",
       description: "Booking layanan dengan cepat melalui WhatsApp.",
     },
@@ -29,33 +29,33 @@ export default function Service() {
 
   const services = [
     {
-      icon: "/icons/service",
+      icon: "/images/Layanan/body-massage.jpg",
       title: "Body Massage",
       description: "Membantu tubuh rileks dan kembali bugar.",
     },
     {
-      icon: "/icons/service",
+      icon: "/images/Layanan/pijat-refleksi.jpg",
       title: "Pijat Refleksi",
       description:
         "Meningkatkan kesehatan organ tubuh melalui pijatan refleksi.",
     },
     {
-      icon: "/icons/service",
+      icon: "/images/Layanan/totok-wajah.jpg",
       title: "Totok Wajah",
       description: "Menghilangkan stres & memberikan efek segar pada wajah.",
     },
     {
-      icon: "/icons/service",
+      icon: "/images/Layanan/pijat-tradisional.jpg",
       title: "Pijat Tradisional",
       description: "Metode klasik untuk mengurangi ketegangan otot.",
     },
     {
-      icon: "/icons/service",
+      icon: "/images/Layanan/pijat-kerokan.jpg",
       title: "Pijat Kerokan",
       description: "Membantu mengeluarkan angin dari tubuh.",
     },
     {
-      icon: "/icons/service",
+      icon: "/images/Layanan/scrub-&-lulur.jpg",
       title: "Scrub & Lulur",
       description: "Membantu regenerasi kulit agar tetap cerah & sehat.",
     },
@@ -122,14 +122,18 @@ export default function Service() {
                            hover:shadow-md transition-all duration-300 text-gray-700"
               >
                 <div className="flex justify-center mb-3">
-                  <Image
-                    src={`${item.icon}.png`}
-                    alt={item.title}
-                    width={50}
-                    height={50}
-                    priority
-                  />
+                  <div className="w-20 h-20 rounded-full overflow-hidden">
+                    <Image
+                      src={`${item.icon}`}
+                      alt={item.title}
+                      width={64}
+                      height={64}
+                      priority
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
                 </div>
+
                 <h3 className="font-semibold text-sm text-[#626F47]">
                   {item.title}
                 </h3>
