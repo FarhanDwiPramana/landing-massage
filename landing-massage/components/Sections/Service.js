@@ -6,90 +6,70 @@ export default function Service() {
     {
       icon: "/icons/service1.png",
       title: "Melayani dengan Tulus",
-      description: "Profesional kenyamanan adalah prioritas kami.",
+      description: "Profesionalisme & kenyamanan pelanggan adalah prioritas kami.",
     },
     {
       icon: "/icons/service2.png",
       title: "Bebas Biaya Transport",
-      description: "Layanan tanpa biaya transport langsung ke lokasi Anda.",
+      description: "Layanan pijat langsung ke lokasi tanpa biaya tambahan.",
     },
     {
       icon: "/icons/service3.png",
       title: "Buka 24 Jam",
-      description: "Tersedia kapan saja sesuai kebutuhan Anda.",
+      description: "Siap melayani kapan pun Anda butuhkan.",
     },
     {
       icon: "/icons/service4.png",
       title: "Pesan Mudah",
-      description: "Pesan layanan pijat dengan cepat melalui WhatsApp.",
+      description: "Booking layanan dengan cepat melalui WhatsApp.",
     },
   ];
 
-  const service = [
+  const services = [
     {
       icon: "/icons/service",
       title: "Body Massage",
-      description:
-        "Manfaat Body Massage sangat banyak untuk mengembalikan tubuh menjadi bugar dan sehat kembali karena dengan memilih menu ini badan anda akan terasa rileks.",
+      description: "Membantu tubuh rileks dan kembali bugar.",
     },
     {
       icon: "/icons/service",
       title: "Pijat Refleksi",
-      description:
-        "Nunc Manfaat dari Pijat Refleksi atau sering juga di sebut Reflexology ini memberikan jutaan manfaat untuk mencegah dan memperbaiki organ bagian dalam.",
+      description: "Meningkatkan kesehatan organ tubuh melalui pijatan refleksi.",
     },
     {
       icon: "/icons/service",
       title: "Totok Wajah",
-      description:
-        "Manfaat yang didapat jika anda melakukan Totok Wajah dengan rutin maka fikiran dan rasa penat yang anda rasakan sebelumnya akan terasa hilang setelah di pijat.",
+      description: "Menghilangkan stres & memberikan efek segar pada wajah.",
     },
     {
       icon: "/icons/service",
       title: "Pijat Tradisional",
-      description:
-        "Untuk manfaat Pijat Tradisional hampir sama dengan menu layanan Body Massage karena metode pemijatannya memang sama persis.",
+      description: "Metode klasik untuk mengurangi ketegangan otot.",
     },
     {
       icon: "/icons/service",
       title: "Pijat Kerokan",
-      description:
-        "Manfaat Pijat Kerokan yaitu untuk mengeluarkan angin yang berada di dalam tubuh anda, pijat (masuk angin) sangat manjur untuk mengusir angin dalam tubuh.",
+      description: "Membantu mengeluarkan angin dari tubuh.",
     },
     {
       icon: "/icons/service",
       title: "Scrub & Lulur",
-      description:
-        "Banyak sekali manfaat Scrub dan Lulur ini untuk mengangkat sel-sel kulit mati dan memberikan nutrisi dan vitamin pada kulit agar tetap cerah dan sehat.",
+      description: "Membantu regenerasi kulit agar tetap cerah & sehat.",
     },
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-white">
-      {/* Background Wave */}
-      <div className="relative -mt-1">
-        <svg
-          className="w-full"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 250"
-        >
-          <path
-            fill="#EDE0D4"
-            fillOpacity="1"
-            d="M0,32L48,48C96,64,192,96,288,133.3C384,171,480,213,576,218.7C672,224,768,192,864,154.7C960,117,1056,75,1152,74.7C1248,75,1344,117,1392,138.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-          ></path>
-        </svg>
-      </div>
-
+    <div className="relative w-full py-8 bg-transparent">
       {/* Features Section */}
-      <div className="py-12 px-6 -mt-90 relative z-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-white">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#5C4033] rounded-lg p-6 text-center shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-3xl"
+              className="bg-[#626F47] rounded-lg p-4 text-center shadow-md text-white
+                         transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-3">
                 <Image
                   src={feature.icon}
                   alt={feature.title}
@@ -97,29 +77,30 @@ export default function Service() {
                   height={50}
                 />
               </div>
-              <h3 className="font-semibold text-lg">{feature.title}</h3>
-              <p className="text-sm">{feature.description}</p>
+              <h3 className="font-semibold text-sm">{feature.title}</h3>
+              <p className="text-xs text-[#DCE5B4]">{feature.description}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Services Section */}
-      <div className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl text-center font-bold text-black">
+      <div className="py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <h1 className="text-3xl text-center font-bold text-[#626F47]">
             Layanan Kami
           </h1>
-          <h2 className="text-xl text-center mt-6">
-            Silakan pilih menu di bawah ini sesuai dengan kebutuhan Anda
+          <h2 className="text-base md:text-lg text-center mt-2 text-[#A4B465]">
+            Pilih layanan sesuai dengan kebutuhan Anda
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-4">
-            {service.map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+            {services.map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-gray-700"
+                className="p-4 bg-white border border-[#A4B465] rounded-lg shadow-sm
+                           hover:shadow-md transition-all duration-300 text-gray-700"
               >
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-3">
                   <Image
                     src={`${item.icon}.png`}
                     alt={item.title}
@@ -127,10 +108,10 @@ export default function Service() {
                     height={50}
                   />
                 </div>
-                <h3 className="font-semibold text-lg text-gray-800">
+                <h3 className="font-semibold text-sm text-[#626F47]">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                <p className="text-xs text-[#A4B465]">{item.description}</p>
               </div>
             ))}
           </div>
