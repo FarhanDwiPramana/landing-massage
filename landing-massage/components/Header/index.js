@@ -4,15 +4,14 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Header() {
   const data = {
     menu_nav: [
-      { id: 1, title: "Home", href: "#home" },
-      { id: 2, title: "About Us", href: "#aboutUs" },
-      { id: 3, title: "Services", href: "#services" },
-      { id: 4, title: "Contacts", href: "#contacts" },
+      { id: 1, title: "Beranda", href: "#beranda" },
+      { id: 2, title: "Layanan", href: "#layanan" },
+      { id: 3, title: "Harga", href: "#harga" },
     ],
   };
 
   const [isOpen, setIsOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState("#home");
+  const [activeNav, setActiveNav] = useState("#beranda");
   const [visible, setVisible] = useState(true);
   let lastScrollY = 0;
 
@@ -41,16 +40,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed w-full bg-white shadow-md z-50 top-0 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <header className="fixed w-full bg-white shadow-md z-50 top-0 transition-transform duration-300 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <div className="w-17 h-17 bg-[#F8FFD9] flex items-center justify-center rounded-full shadow-md overflow-hidden">
           <img
-            src="/images/Main/logo.png" 
+            src="/images/Main/logo.png"
             alt="Logo FRESH"
             className="w-full h-full object-cover"
           />
@@ -61,10 +56,7 @@ export default function Header() {
             <a
               key={item.id}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveNav(item.href);
-              }}
+              onClick={() => setActiveNav(item.href)}
               className={`relative pb-1 after:block after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 ${
                 activeNav === item.href
                   ? "text-green-700 after:w-full"
@@ -101,13 +93,14 @@ export default function Header() {
             <a
               key={item.id}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 setActiveNav(item.href);
                 setIsOpen(false);
               }}
-              className={`text-black text-lg font-medium w-full text-center py-2 transition-all ${
-                activeNav === item.href ? "text-green-700 bg-gray-100" : "hover:text-green-700 hover:bg-gray-50"
+              className={`relative text-black text-lg font-medium w-full text-center py-2 transition-all after:block after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 after:mx-auto ${
+                activeNav === item.href
+                  ? "text-green-700 after:w-full"
+                  : "hover:text-green-700 hover:bg-gray-50 after:w-0 hover:after:w-full"
               }`}
             >
               {item.title}

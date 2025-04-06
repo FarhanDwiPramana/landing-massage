@@ -1,3 +1,4 @@
+// components/Service.js
 import Image from "next/image";
 import React from "react";
 
@@ -6,7 +7,8 @@ export default function Service() {
     {
       icon: "/icons/service1.png",
       title: "Melayani dengan Tulus",
-      description: "Profesionalisme & kenyamanan pelanggan adalah prioritas kami.",
+      description:
+        "Profesionalisme & kenyamanan pelanggan adalah prioritas kami.",
     },
     {
       icon: "/icons/service2.png",
@@ -34,7 +36,8 @@ export default function Service() {
     {
       icon: "/icons/service",
       title: "Pijat Refleksi",
-      description: "Meningkatkan kesehatan organ tubuh melalui pijatan refleksi.",
+      description:
+        "Meningkatkan kesehatan organ tubuh melalui pijatan refleksi.",
     },
     {
       icon: "/icons/service",
@@ -59,13 +62,17 @@ export default function Service() {
   ];
 
   return (
-    <div className="relative w-full py-8 bg-transparent">
+    <div id="layanan" className="relative w-full py-8 bg-transparent">
+      {/* Spacer tambahan untuk scroll ke atas */}
+      <div className="h-32" />
+
       {/* Features Section */}
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
+              data-aos="fade-up"
               className="bg-[#626F47] rounded-lg p-4 text-center shadow-md text-white
                          transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
@@ -75,6 +82,7 @@ export default function Service() {
                   alt={feature.title}
                   width={50}
                   height={50}
+                  priority
                 />
               </div>
               <h3 className="font-semibold text-sm">{feature.title}</h3>
@@ -87,16 +95,29 @@ export default function Service() {
       {/* Services Section */}
       <div className="py-16">
         <div className="max-w-5xl mx-auto px-4">
-          <h1 className="text-3xl text-center font-bold text-[#626F47]">
+          <h1
+            className="text-3xl text-center font-bold text-[#626F47]"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-once="false"
+          >
             Layanan Kami
           </h1>
-          <h2 className="text-base md:text-lg text-center mt-2 text-[#A4B465]">
+          <h2
+            className="text-base md:text-lg text-center mt-2 text-[#A4B465]"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="100"
+            data-aos-once="false"
+          >
             Pilih layanan sesuai dengan kebutuhan Anda
           </h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
             {services.map((item, index) => (
               <div
                 key={index}
+                data-aos="zoom-in"
                 className="p-4 bg-white border border-[#A4B465] rounded-lg shadow-sm
                            hover:shadow-md transition-all duration-300 text-gray-700"
               >
@@ -106,6 +127,7 @@ export default function Service() {
                     alt={item.title}
                     width={50}
                     height={50}
+                    priority
                   />
                 </div>
                 <h3 className="font-semibold text-sm text-[#626F47]">
@@ -117,6 +139,9 @@ export default function Service() {
           </div>
         </div>
       </div>
+
+      {/* Spacer bawah */}
+      <div className="h-32" />
     </div>
   );
 }

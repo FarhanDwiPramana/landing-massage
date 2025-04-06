@@ -25,6 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .container-h {
     @apply h-96 border max-w-7xl mx-auto;

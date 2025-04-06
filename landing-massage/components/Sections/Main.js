@@ -15,12 +15,14 @@ export default function Main() {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-start overflow-hidden bg-[#DDEEB1]">
+    <div
+      id="beranda"
+      className="relative w-full min-h-screen flex items-center justify-start overflow-hidden bg-[#DDEEB1]"
+    >
       {/* Background Slideshow */}
       <div className="absolute inset-0 w-full h-full">
         {images.map((src, index) => (
@@ -37,33 +39,55 @@ export default function Main() {
         ))}
       </div>
 
-      {/* Overlay Gradasi Hijau */}
+      {/* Overlay Gradasi */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#A3B18A]/70 to-[#DDEEB1]/90"></div>
 
       {/* Konten */}
-      <div className="relative flex flex-col items-start justify-center h-screen max-w-7xl 
-                      px-10 md:px-16 lg:px-24 mx-auto space-y-6 text-left mt-20 md:mt-32 lg:mt-40">
-        <h3 className="flex items-center gap-2 text-lg text-white font-semibold tracking-wide">
-          <FaSeedling className="text-2xl text-[#4B6025]" />
+      <div className="relative flex flex-col items-start justify-center h-screen  max-w-7xl px-6 sm:px-10 md:px-16 lg:px-24 mx-auto space-y-6 text-left text-white mt-10">
+        {/* Subjudul */}
+        <h3
+          className="flex items-center gap-2 text-sm sm:text-base md:text-lg font-semibold tracking-wide"
+          data-aos="fade-down"
+          data-aos-duration="800"
+        >
+          <FaSeedling className="text-xl sm:text-2xl text-[#4B6025]" />
           Solusi Sehat dengan Harga Hemat
         </h3>
 
-        <h1 className="text-5xl md:text-6xl font-bold max-w-xl leading-tight text-white drop-shadow-md">
-          Anda <span className="text-[#4B6025]">Pegal?</span> Order Pijat di <br />
+        {/* Judul */}
+        <h1
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight drop-shadow-md"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="800"
+        >
+          Anda <span className="text-[#4B6025]">Pegal?</span> Order Pijat di{" "}
+          <br />
           <span className="text-[#4B6025]">Fresh Massage</span>
         </h1>
 
-        <p className="text-xl md:text-2xl font-medium max-w-xl text-white drop-shadow-md">
+        {/* Deskripsi */}
+        <p
+          className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium max-w-2xl drop-shadow-md"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           Fresh Massage, layanan pijat dan spa online berpengalaman 4+ tahun,
           siap menghadirkan pijat profesional untuk kenyamanan Anda di hotel,
           rumah, kos, vila, dan apartemen.
         </p>
 
         {/* Tombol WA */}
-        <button className="px-6 py-3 mt-6 text-lg md:text-xl font-bold uppercase bg-[#4B6025] text-white rounded-lg shadow-lg 
-                           transition-all duration-300 ease-in-out flex items-center gap-3 cursor-pointer 
-                           hover:bg-[#3A4E1D] hover:-translate-y-1 active:scale-95">
-          <FaWhatsapp className="text-2xl" /> Booking Sekarang
+        <button
+          className="px-6 py-3 text-base sm:text-lg md:text-xl font-bold uppercase bg-[#4B6025] text-white rounded-lg shadow-lg 
+          transition-all duration-300 ease-in-out flex items-center gap-3 cursor-pointer 
+          hover:bg-[#3A4E1D] hover:-translate-y-1 active:scale-95"
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-delay="300"
+        >
+          <FaWhatsapp className="text-xl sm:text-2xl" /> Booking Sekarang
         </button>
       </div>
     </div>
