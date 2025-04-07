@@ -4,6 +4,8 @@ import "@/styles/globals.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
+import SEO from "../next-seo.config";
+import { DefaultSeo } from "next-seo";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -24,6 +26,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <Layout>
+      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
     </Layout>
   );

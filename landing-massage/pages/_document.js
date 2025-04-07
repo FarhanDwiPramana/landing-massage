@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/images/Main/logo-head.jpg" />
-        <title>Pijat Area Malang Batu</title>
+        <title> Pijat Area Malang Batu </title>
         <meta
           name="description"
           content="Temukan layanan pijat profesional di Batu dengan harga terjangkau dan terapis berpengalaman. Booking online sekarang!"
