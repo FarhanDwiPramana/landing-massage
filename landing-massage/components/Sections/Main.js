@@ -80,7 +80,7 @@ export default function Main() {
 
         {/* Tombol WA */}
         <a
-          href="https://wa.me/6282142784477"
+          href="https://wa.me/6287758455356"
           target="_blank"
           rel="noopener noreferrer"
           data-aos="zoom-in"

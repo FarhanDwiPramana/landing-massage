@@ -73,7 +73,7 @@ export default function Header() {
 
         {/* Contact Button */}
         <a
-          href="https://wa.me/6282142784477"
+          href="https://wa.me/6287758455356"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:block px-5 py-2 bg-[#A0C878] text-white text-sm font-bold rounded-full shadow-md hover:bg-green-600 transition"

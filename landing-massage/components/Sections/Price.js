@@ -6,22 +6,22 @@ export default function HargaLayanan() {
 
   const prices = {
     pagi: {
-      label: "Pagi",
+      label: "60 Menit",
       icon: <Sun size={24} className="text-black" />,
-      time: "08:00 AM",
-      price: "Rp 50.000",
+      time: "60 Menit",
+      price: "Rp 200.000",
     },
     siang: {
-      label: "Siang",
+      label: "90 Menit",
       icon: <SunMedium size={24} className="text-yellow-400" />,
-      time: "12:00 PM",
-      price: "Rp 70.000",
+      time: "90 Menit",
+      price: "Rp 250.000",
     },
     malam: {
-      label: "Malam",
+      label: "120 Menit",
       icon: <Moon size={24} className="text-blue-300" />,
-      time: "07:00 PM",
-      price: "Rp 90.000",
+      time: "120 Menit",
+      price: "Rp 300.000",
     },
   };
 
@@ -97,7 +97,7 @@ export default function HargaLayanan() {
 
             {/* Tombol Booking */}
             <a
-              href="https://wa.me/6282142784477"
+              href="https://wa.me/6287758455356"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 block bg-[#A4B465] text-white px-6 py-3 rounded-full w-full text-base sm:text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-[#8DA457] hover:shadow-lg text-center"

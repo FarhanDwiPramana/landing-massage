@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
       {/* Tombol WhatsApp di kanan bawah */}
       <a
-        href="https://wa.me/628142784477"
+        href="https://wa.me/6287758455356"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full shadow-lg border border-gray-300 hover:bg-gray-100 transition-all duration-300"

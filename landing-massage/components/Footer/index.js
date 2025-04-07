@@ -53,9 +53,11 @@ export default function Footer() {
             Hubungi Kami
           </h2>
           <ul className="text-sm space-y-2 opacity-90">
-            <li>📍 Jalan Contoh No. 123, Kota ABC</li>
-            <li>✉️ email@contoh.com</li>
-            <li>📞 0812-3456-7890</li>
+            <li>
+              📍 Langlang II, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153
+            </li>
+            <li>✉️ hidayatteguh486@gmail.com</li>
+            <li>📞 0877-5845-5356</li>
           </ul>
         </div>
       </div>
