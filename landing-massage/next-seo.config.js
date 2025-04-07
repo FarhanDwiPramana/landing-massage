@@ -6,7 +6,7 @@ const SEO = {
     {
       name: "keywords",
       content:
-        "pijat di Batu, pijat Batu, terapis pijat, layanan pijat Batu, pijat di malang, pijat panggilan malang, pijat refleksi malang, pijat terdekat, tempat pijat di malang, pijat malang",
+        "pijat di Batu, pijat Batu, terapis pijat, layanan pijat Batu, pijat di malang, pijat panggilan malang, pijat refleksi malang, pijat terdekat, tempat pijat di malang, pijat malang, massage malang",
     },
   ],
   //   openGraph: {
