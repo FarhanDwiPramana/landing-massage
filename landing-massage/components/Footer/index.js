@@ -41,9 +41,8 @@ export default function Footer() {
             Jam Operasional
           </h2>
           <ul className="text-sm space-y-1 opacity-90">
-            <li>Senin - Jumat: 08:00 - 20:00</li>
-            <li>Sabtu: 09:00 - 18:00</li>
-            <li className="opacity-70">Minggu: Tutup</li>
+            <li>Setiap Hari</li>
+            <li>24 Jam</li>
           </ul>
         </div>
 
@@ -56,7 +55,7 @@ export default function Footer() {
             <li>
               📍 Langlang II, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153
             </li>
-            <li>✉️ hidayatteguh486@gmail.com</li>
+            <li>✉️ pijatpanggilanmalang9@gmail.com</li>
             <li>📞 0877-5845-5356</li>
           </ul>
         </div>

@@ -17,28 +17,26 @@ export default function Header() {
   let lastScrollY = 0;
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        setVisible(false);
-      } else {
-        setVisible(true);
+    const sections = document.querySelectorAll("section[id]");
+
+    const handleScrollSpy = () => {
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          currentSection = "#" + section.id;
+        }
+      });
+
+      if (currentSection && currentSection !== activeNav) {
+        setActiveNav(currentSection);
       }
-      lastScrollY = window.scrollY;
     };
 
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    window.addEventListener("scroll", handleScrollSpy);
+    return () => window.removeEventListener("scroll", handleScrollSpy);
+  }, [activeNav]);
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50 top-0 transition-transform duration-300 ">
