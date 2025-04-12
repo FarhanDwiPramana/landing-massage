@@ -120,7 +120,7 @@ export default function HargaLayanan() {
         </p>
 
         <a
-          href="https://wa.me/6282142784477"
+          href="https://wa.me/6287758455356"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white border-2 border-white text-[#626F44] font-semibold py-3 px-6 rounded-full flex items-center gap-2 transition-all duration-300 ease-in-out hover:bg-[#A4B465] hover:text-white shadow-md"
